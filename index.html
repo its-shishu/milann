@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harborline | Port Container Management</title>
+<link rel="stylesheet" href="milanproject.css">
+</head>
+<body>
+<div class="shell">
+
+<input type="radio" name="page" id="tab-overview" checked>
+<input type="radio" name="page" id="tab-containers">
+<input type="radio" name="page" id="tab-vessels">
+<input type="radio" name="page" id="tab-yard">
+<input type="radio" name="page" id="tab-arrivals">
+<input type="radio" name="page" id="tab-movements">
+<input type="radio" name="page" id="tab-reports">
+<input type="radio" name="page" id="tab-about">
+
+<aside class="sidebar">
+  <div class="brand">⚓ HARBORLINE<small>PORT OPERATIONS</small></div>
+  <div class="nav-title">Project interfaces</div>
+  <nav class="nav">
+    <label for="tab-overview">01 · Overview</label>
+    <label for="tab-containers">02 · Containers</label>
+    <label for="tab-vessels">03 · Vessels</label>
+    <label for="tab-yard">04 · Yard map</label>
+    <label for="tab-arrivals">05 · Arrivals</label>
+    <label for="tab-movements">06 · Movements</label>
+    <label for="tab-reports">07 · Reports</label>
+    <label for="tab-about">08 · About project</label>
+  </nav>
+  <div class="sidebar-note"><b>● Port systems operational</b><br>East Terminal · Berth 04<br>Student project demonstration</div>
+</aside>
+
+<main class="main">
+  <header class="top">
+    <span>Maritime Port Container Management</span>
+    <span><strong>East Terminal</strong> · Demo data</span>
+  </header>
+
+  <div class="content">
+
+    <section class="view overview">
+      <div class="head">
+        <div>
+          <div class="kicker">Student project · Port operations</div>
+          <h1>Harborline Operations</h1>
+          <p class="sub">A simple interface for tracking containers, vessels and yard activity.</p>
+        </div>
+        <span class="badge">OVERVIEW</span>
+      </div>
+      <div class="stats">
+        <div class="card"><small>Containers in yard</small><div class="value">1,284</div><span class="green">Across all yard zones</span></div>
+        <div class="card"><small>Ready for dispatch</small><div class="value">486</div><span class="green">Available containers</span></div>
+        <div class="card"><small>Vessels in port</small><div class="value">12</div><span class="green">Active assignments</span></div>
+        <div class="card"><small>Needs attention</small><div class="value">12</div><span class="gold">Customs or inspection hold</span></div>
+      </div>
+      <div class="columns">
+        <div class="panel">
+          <h2>Yard capacity</h2><p class="muted">East Terminal · 68% occupied</p>
+          <div class="bar"><span></span></div>
+          <p class="muted">1,284 occupied · 604 available · 1,888 TEU maximum</p>
+        </div>
+        <div class="panel">
+          <h2>Latest activity</h2>
+          <div class="row">16:18 · Container dispatched <b>Gate 2</b></div>
+          <div class="row">15:52 · Vessel assignment updated <b>Ocean Crest</b></div>
+          <div class="row">15:24 · Container received <b>Zone B-12</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view containers">
+      <div class="head"><div><div class="kicker">Interface 02</div><h1>Container inventory</h1><p class="sub">Sample container records, vessel assignments and current locations.</p></div><span class="badge">CONTAINERS</span></div>
+      <div class="panel">
+        <table>
+          <thead><tr><th>Container ID</th><th>Type</th><th>Vessel</th><th>Yard location</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="id">MSCU 782 104-3</td><td>40 ft Standard</td><td>MV Ocean Crest</td><td>Zone A-04</td><td><span class="pill">Available</span></td></tr>
+            <tr><td class="id">MSCU 441 092-8</td><td>20 ft Standard</td><td>MV Ocean Crest</td><td>Berth 04</td><td><span class="pill gold">In transit</span></td></tr>
+            <tr><td class="id">TGHU 608 315-2</td><td>40 ft High cube</td><td>MV Pacific Dawn</td><td>Zone B-12</td><td><span class="pill blue">Loading</span></td></tr>
+            <tr><td class="id">CMAU 219 730-1</td><td>40 ft Refrigerated</td><td>MV Blue Horizon</td><td>Zone C-06</td><td><span class="pill red">On hold</span></td></tr>
+            <tr><td class="id">OOLU 553 816-9</td><td>20 ft Standard</td><td>MV Eastern Star</td><td>Zone A-18</td><td><span class="pill">Available</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="view vessels">
+      <div class="head"><div><div class="kicker">Interface 03</div><h1>Vessel schedule</h1><p class="sub">Vessels assigned to the terminal and their current operations.</p></div><span class="badge">VESSELS</span></div>
+      <div class="panel">
+        <table>
+          <thead><tr><th>Vessel</th><th>Berth</th><th>Arrival</th><th>Containers</th><th>Operation</th></tr></thead>
+          <tbody>
+            <tr><td class="id">MV Ocean Crest</td><td>Berth 04</td><td>Today · 12:30</td><td>248</td><td><span class="pill blue">Unloading</span></td></tr>
+            <tr><td class="id">MV Pacific Dawn</td><td>Berth 02</td><td>Today · 09:15</td><td>186</td><td><span class="pill gold">Loading</span></td></tr>
+            <tr><td class="id">MV Eastern Star</td><td>Berth 06</td><td>Tomorrow · 06:00</td><td>312</td><td><span class="pill">Scheduled</span></td></tr>
+            <tr><td class="id">MV Blue Horizon</td><td>Berth 01</td><td>Tomorrow · 10:45</td><td>127</td><td><span class="pill">Scheduled</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="view yard-view">
+      <div class="head"><div><div class="kicker">Interface 04</div><h1>Yard location map</h1><p class="sub">Illustrative block layout showing container stack availability.</p></div><span class="badge">YARD MAP</span></div>
+      <div class="panel">
+        <div class="yard">
+          <div class="slot occupied">A-01<br>Occupied</div><div class="slot">A-02<br>Available</div><div class="slot occupied">A-03<br>Occupied</div><div class="slot inspection">A-04<br>Inspection</div><div class="slot">A-05<br>Available</div><div class="slot occupied">A-06<br>Occupied</div>
+          <div class="slot">B-01<br>Available</div><div class="slot occupied">B-02<br>Occupied</div><div class="slot occupied">B-03<br>Occupied</div><div class="slot">B-04<br>Available</div><div class="slot inspection">B-05<br>Inspection</div><div class="slot occupied">B-06<br>Occupied</div>
+          <div class="slot occupied">C-01<br>Occupied</div><div class="slot">C-02<br>Available</div><div class="slot occupied">C-03<br>Occupied</div><div class="slot occupied">C-04<br>Occupied</div><div class="slot">C-05<br>Available</div><div class="slot occupied">C-06<br>Occupied</div>
+        </div>
+        <p class="muted">Green: available · Blue: occupied · Amber: inspection hold</p>
+      </div>
+      <div class="columns">
+        <div class="card"><h2>Zone A</h2><p class="muted">18 of 24 bays occupied</p></div>
+        <div class="card"><h2>Zone B</h2><p class="muted">21 of 28 bays occupied</p></div>
+      </div>
+    </section>
+
+    <section class="view arrivals">
+      <div class="head"><div><div class="kicker">Interface 05</div><h1>Expected arrivals</h1><p class="sub">Upcoming vessel calls and planned cargo at the port.</p></div><span class="badge">ARRIVALS</span></div>
+      <div class="panel">
+        <table>
+          <thead><tr><th>Expected</th><th>Vessel</th><th>Berth</th><th>Containers</th><th>Arrival status</th></tr></thead>
+          <tbody>
+            <tr><td>Today · 20:45</td><td class="id">MV Northern Light</td><td>Berth 03</td><td>154</td><td><span class="pill gold">Approaching</span></td></tr>
+            <tr><td>Tomorrow · 06:00</td><td class="id">MV Eastern Star</td><td>Berth 06</td><td>312</td><td><span class="pill">Scheduled</span></td></tr>
+            <tr><td>Tomorrow · 14:30</td><td class="id">MV Coral Bay</td><td>Berth 01</td><td>98</td><td><span class="pill">Scheduled</span></td></tr>
+            <tr><td>Nov 16 · 08:00</td><td class="id">MV Silver Tide</td><td>Berth 05</td><td>203</td><td><span class="pill">Scheduled</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="view movements">
+      <div class="head"><div><div class="kicker">Interface 06</div><h1>Movement history</h1><p class="sub">Recent container handling events recorded at the terminal.</p></div><span class="badge">MOVEMENTS</span></div>
+      <div class="steps">
+        <div class="step"><b>Gate-in · Container received</b><p>TGHU 608 315-2 · Zone B-12<br>Today, 15:24</p></div>
+        <div class="step"><b>Yard transfer</b><p>OOLU 553 816-9 · A-12 to A-18<br>Today, 14:48</p></div>
+        <div class="step"><b>Vessel loading</b><p>MSCU 441 092-8 · MV Ocean Crest<br>Today, 13:52</p></div>
+        <div class="step"><b>Gate-out · Dispatched</b><p>MSCU 782 104-3 · Gate 2<br>Today, 16:18</p></div>
+      </div>
+      <div class="panel movement-details">
+        <h2>Movement details</h2>
+        <div class="row"><b>Container</b><span>MSCU 782 104-3</span></div>
+        <div class="row"><b>Movement type</b><span>Gate-out / Dispatch</span></div>
+        <div class="row"><b>Destination</b><span>Gate 2 collection point</span></div>
+      </div>
+    </section>
+
+    <section class="view reports">
+      <div class="head"><div><div class="kicker">Interface 07</div><h1>Operations reports</h1><p class="sub">Illustrative container activity over the working week.</p></div><span class="badge">REPORTS</span></div>
+      <div class="columns">
+        <div class="panel">
+          <h2>Containers handled</h2>
+          <div class="chart">
+            <div class="barcol barcol-mon"><small>Mon</small></div>
+            <div class="barcol barcol-tue"><small>Tue</small></div>
+            <div class="barcol barcol-wed"><small>Wed</small></div>
+            <div class="barcol barcol-thu"><small>Thu</small></div>
+            <div class="barcol barcol-fri"><small>Fri</small></div>
+            <div class="barcol barcol-sat"><small>Sat</small></div>
+            <div class="barcol barcol-sun"><small>Sun</small></div>
+          </div>
+          <p class="muted">Sample illustration; values are demonstration data.</p>
+        </div>
+        <div class="panel">
+          <h2>Weekly summary</h2>
+          <div class="row"><span>Containers received</span><b>842</b></div>
+          <div class="row"><span>Containers dispatched</span><b>716</b></div>
+          <div class="row"><span>Vessel calls</span><b>18</b></div>
+          <div class="row"><span>Average yard use</span><b>68%</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view about">
+      <div class="head"><div><div class="kicker">Interface 08</div><h1>About this project</h1><p class="sub">Maritime Port Container Management</p></div><span class="badge">PROJECT INFO</span></div>
+      <div class="panel info">
+        <p>This student project demonstrates how a simplified port operations website can organize container records, vessel assignments, yard locations, availability and container movement history.</p>
+        <p>The eight screens are built using HTML and CSS. Click the menu on the left to switch between screens. All records and figures shown are sample data for demonstration only.</p>
+        <p>This version is a static front-end project. It does not store changes or connect to a live port system.</p>
+        <h2>Project goals</h2>
+        <ul>
+          <li>Organize container information in a clear table.</li>
+          <li>Show vessel assignments and expected arrivals.</li>
+          <li>Display yard locations and recent container movements.</li>
+          <li>Present a simple operational summary.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">Harborline · Maritime Port Container Management · Student project prototype</div>
+  </div>
+</main>
+</div>
+</body>
+</html>
